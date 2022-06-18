@@ -6,10 +6,16 @@
 </head>
 <body>
 <div>
-    <h1>Basic Title</h1>
+    <h1>Basic Blog</h1>
 </div>
 <div>
-    <em>Text</em>
+    {% for post in posts%}
+    <h2><a href="">{{post.title}}</a></h2>
+    <em>{{post.text|linebreaksbr}}</em>
+    <hr>
+    <p>Published Date: {{post.publish_date}}</p>
+    <br>
 </div>
+{% endfor %}
 </body>
 </html>
